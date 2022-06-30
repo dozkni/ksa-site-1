@@ -5,6 +5,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Calibri:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -81,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -396,7 +399,7 @@ table {
 }
 
 body {
-  font-family: "Calibri", sans-serif;
+  font-family: "Calibri", "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -479,7 +482,7 @@ header {
   margin-bottom: 68px;
 }
 .offer button {
-  font-size: 46px;
+  font-size: 43px;
   font-weight: bold;
   height: 75px;
   width: 636px;
