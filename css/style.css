@@ -83,7 +83,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -407,10 +408,10 @@ button {
   padding: 0;
   background-color: rgb(243, 191, 0);
   box-shadow: 6px 6px 12px 0px grey;
+  transition: 0.2s;
 }
 button:hover {
-  box-shadow: 6px 6px 13px 1px grey;
-  transform: translateX(-1px);
+  background-color: rgb(253, 207, 0);
 }
 
 .container {
