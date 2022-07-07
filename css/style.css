@@ -83,8 +83,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -491,7 +490,8 @@ header {
 
 @media (max-width: 991px) {
   .container {
-    width: 720px;
+    padding: 0 1em;
+    margin: 0;
   }
 
   header {
@@ -507,12 +507,21 @@ header {
   }
 }
 @media (max-width: 767px) {
-  .container {
-    width: 540px;
+  header {
+    height: 90px;
   }
 
   .main-section {
     min-height: 450px;
+  }
+
+  .offer h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  .offer button {
+    font-size: 26px;
+    width: 100%;
   }
 
   .header__logo-title {
@@ -526,6 +535,7 @@ header {
     right: 0;
     width: 70%;
     height: 100vh;
+    background: white;
     z-index: 10;
     transform: translate(100%);
     transition: transform 0.5s ease-in-out;
