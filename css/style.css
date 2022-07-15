@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Calibri:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 html {
   line-height: 1.15; /* 1 */
@@ -74,8 +74,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -369,7 +368,7 @@ table {
 }
 
 body {
-  font-family: "Calibri", "Roboto", sans-serif;
+  font-family: "Calibri", "Source Sans Pro", "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -377,17 +376,11 @@ button {
   position: relative;
   border: none;
   padding: 0;
-  background-color: rgb(243, 191, 0);
   box-shadow: 6px 6px 8px 2px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
 }
-button:hover {
-  background-color: rgb(253, 207, 0);
-}
 button:active {
   box-shadow: none;
-  background-color: rgba(253, 207, 0, 0);
-  border: solid 3px rgb(253, 207, 0);
 }
 button:active::before {
   content: "";
@@ -406,6 +399,7 @@ button:active::before {
   display: flex;
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 .header__container {
@@ -475,6 +469,15 @@ button:active::before {
   font-weight: bold;
   height: 75px;
   width: 636px;
+  background-color: rgb(243, 191, 0);
+}
+.offer button:hover {
+  background-color: rgb(253, 207, 0);
+}
+.offer button:active {
+  box-shadow: none;
+  background-color: rgba(253, 207, 0, 0);
+  border: solid 3px rgb(253, 207, 0);
 }
 
 .slides-wrapper {
@@ -488,28 +491,7 @@ button:active::before {
   width: 1020px;
   height: 160px;
   display: flex;
-  -webkit-animation: round 16s infinite;
-          animation: round 16s infinite;
-}
-@-webkit-keyframes round {
-  26% {
-    transform: translateX(0);
-  }
-  32% {
-    transform: translateX(-340px);
-  }
-  59% {
-    transform: translateX(-340px);
-  }
-  64% {
-    transform: translateX(-680px);
-  }
-  91% {
-    transform: translateX(-680px);
-  }
-  96% {
-    transform: translateX(0);
-  }
+  animation: round 16s infinite;
 }
 @keyframes round {
   26% {
@@ -547,9 +529,96 @@ button:active::before {
   margin-right: 10px;
 }
 
+.second-section {
+  background: url("../img/DS7A4318.jpg") no-repeat fixed #ccc;
+  background-size: cover;
+  position: relative;
+}
+.second-section__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+}
+.second-section__container {
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template: "1fr 1fr 1fr";
+  gap: 2em;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: stretch;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.15);
+}
+.card__color-buh {
+  --card-color: #fe3c3c;
+}
+.card__icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  fill: var(--card-color);
+}
+.card h2 {
+  font-size: 30px;
+  color: var(--card-color);
+}
+.card hr {
+  margin: 20px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 1px solid var(--card-color);
+}
+.card__content {
+  text-align: left;
+  flex-grow: 1;
+}
+.card__content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.card__content ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+.card__content ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.card button {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  width: 138px;
+  height: 32px;
+  background-color: var(--card-color);
+}
+.card button:active {
+  box-shadow: none;
+  color: var(--card-color);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 3px var(--card-color);
+}
+
 @media (max-width: 991px) {
   .container {
-    padding: 0 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0;
   }
   header {
@@ -564,10 +633,13 @@ button:active::before {
   .slides-wrapper {
     display: none;
   }
+  .second-section__container {
+    grid-template: "1fr 1fr";
+  }
 }
 @media (max-width: 767px) {
-  header {
-    height: 90px;
+  .header__container {
+    height: 94px;
   }
   .main-section {
     min-height: 450px;
@@ -660,5 +732,8 @@ button:active::before {
   }
   .checkbox:checked ~ .header__logo {
     display: none;
+  }
+  .second-section__container {
+    grid-template: "1fr";
   }
 }/*# sourceMappingURL=style.css.map */
