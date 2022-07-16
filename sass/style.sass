@@ -78,7 +78,12 @@ button
         min-height: 524px
         display: flex
         justify-content: space-between
-        align-items: center  
+        align-items: center
+    &__button
+        font-size: 43px
+        font-weight: bold
+        height: 75px
+        width: 636px  
 
 .offer
     h1
@@ -90,11 +95,7 @@ button
         font-size: 36px
         font-weight: 300
         margin-bottom: 68px
-    button
-        font-size: 43px
-        font-weight: bold
-        height: 75px
-        width: 636px
+    &__button
         background-color: rgb(243, 191, 0)
         &:hover
             background-color: rgb(253, 207, 0)
@@ -160,7 +161,7 @@ button
         padding-top: 1em
         padding-bottom: 1em
         display: grid
-        grid-template: '1fr 1fr 1fr'
+        grid-template-columns: 1fr 1fr 1fr
         gap: 2em
 
 .card
@@ -172,8 +173,6 @@ button
     background-color: rgba(255,255,255,0.75)
     padding: 20px
     box-shadow: 2px 2px 10px 4px rgb(0 0 0 / 15%)
-    &__color-buh
-        --card-color: #fe3c3c
     &__icon
         width: 50px
         height: 50px
@@ -187,7 +186,7 @@ button
         margin: 20px 0
         padding: 0
         height: 0
-        border: none
+        width: 100%
         border-top: 1px solid var(--card-color)
     &__content
         text-align: left
@@ -216,6 +215,51 @@ button
             background-color: rgba(0, 0, 0, 0)
             border: solid 3px var(--card-color)
 
+footer
+    color: white
+    background-color: #878787
+    font-size: 22px
+    line-height: 28px
+    h2
+        font-size: 30px
+        font-weight: bold
+        margin-bottom: 20px
+
+.footer
+    &__container
+        padding: 50px
+        justify-content: space-around
+    &__left
+        margin-right: 1em
+    &__contacts
+        margin-bottom: 50px
+    &__messengers
+        margin-bottom: 50px
+        &__icons
+            width: 320px
+            text-align: center
+            margin-bottom: 20px
+            img
+                height: 60px
+                margin-right: 25px
+                &:last-child
+                    margin-right: 0
+    &__button
+        font-size: 36px
+        font-weight: bold
+        height: 60px
+        width: 320px
+        border-radius: 17px
+    &__requisits
+        font-size: 18px
+    &__products
+        margin-bottom: 60px
+    &__partner
+        font-size: 18px
+        img
+            height: 90px
+            margin-bottom: 20px
+
 
 
 
@@ -235,7 +279,7 @@ button
 
     .second-section
         &__container
-            grid-template: '1fr 1fr'
+            grid-template-columns: 1fr 1fr
 
 
 
@@ -251,7 +295,7 @@ button
         h1
             font-size: 36px
             line-height: 46px
-        button
+        &__button
             font-size: 26px
             width: 100%
 
@@ -336,4 +380,9 @@ button
 
     .second-section
         &__container
-            grid-template: '1fr'
+            grid-template-columns: 1fr
+
+    .footer
+        &__messengers
+            &__icons
+                width: 100%
