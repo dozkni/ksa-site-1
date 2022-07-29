@@ -103,6 +103,7 @@ button
 
 .offer
     &__button
+        font-weight: bold
         background-color: rgb(243, 191, 0)
         &:hover
             background-color: rgb(253, 207, 0)
@@ -291,13 +292,57 @@ footer
         font-size: 30px
         line-height: 60px
     p
-        line-height: 20px
+        font-size: 22px
+        line-height: 25px
     button
         font-size: 32px
         font-weight: bold
         height: 54px
         width: 250px
 
+.section-its
+    position: relative
+    padding-top: 30px
+    img
+        position: absolute
+        left: -64px
+    &__container
+        min-height: 1042px
+        justify-content: flex-end
+        //padding: 132px 0 0 25%
+    &__content
+        position: absolute
+        left: 580px
+        padding-top: 132px
+        display: flex
+        flex-direction: column
+        h3
+            font-size: 42px
+            line-height: 50px
+            margin-bottom: 20px
+        p
+            font-size: 26px
+            line-height: 30px
+        &__price
+            padding: 68px 0
+            font-size: 56px
+            line-height: 64px
+            font-weight: bold
+        button
+            font-size: 36px
+            height: 58px
+            width: 440px
+            margin-bottom: 50px   
+
+
+
+@media (max-width: 1155px)
+    .section-its
+        img
+            opacity: .4
+        &__content
+            position: sticky
+        
 
 
 @media (max-width: 991px)
@@ -316,6 +361,7 @@ footer
 
     .cards-container
         grid-template-columns: 1fr 1fr
+
 
 
 
@@ -421,3 +467,8 @@ footer
         &__messengers
             &__icons
                 width: 100%
+
+
+    .section-its
+        img
+            display: none
